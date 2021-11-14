@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Answer extends StatelessWidget {
   final VoidCallback handler;
   final String text;
-  
+
   Answer(this.text, this.handler);
 
   @override
@@ -21,12 +21,12 @@ class Answer extends StatelessWidget {
     }
 
     return Container(
-      width: double.infinity,
-      child: TextButton(
-              onPressed: handler,
-              child: Text(text),
-              style: ButtonStyle(foregroundColor: MaterialStateProperty.resolveWith(getColor)),
-              )
-    );
+        width: double.infinity,
+        child: TextButton(
+          onPressed: handler,
+          child: Text(text),
+          style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.resolveWith(getColor)),
+        ));
   }
 }
